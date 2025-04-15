@@ -33,18 +33,17 @@ CREATE TABLE sales_data (
 );
 
 
+![Dataset](https://github.com/user-attachments/assets/8023c322-3d58-409e-ae69-9a411050fd0c)
+
+
+
+
 INSERT INTO sales_data VALUES (1, 101, 'Alice', 'Electronics', 1000, TO_DATE('2023-01-10', 'YYYY-MM-DD'));
 INSERT INTO sales_data VALUES (2, 102, 'Bob', 'Electronics', 800, TO_DATE('2023-01-12', 'YYYY-MM-DD'));
 INSERT INTO sales_data VALUES (3, 103, 'Charlie', 'Furniture', 950, TO_DATE('2023-01-11', 'YYYY-MM-DD'));
 INSERT INTO sales_data VALUES (4, 104, 'David', 'Electronics', 1200, TO_DATE('2023-01-15', 'YYYY-MM-DD'));
 INSERT INTO sales_data VALUES (5, 105, 'Eva', 'Furniture', 900, TO_DATE('2023-01-17', 'YYYY-MM-DD'));
 INSERT INTO sales_data VALUES (6, 106, 'Frank', 'Furniture', 950, TO_DATE('2023-01-20', 'YYYY-MM-DD'));
-
-
-
-
-
-
 
 
 1. SELECT 
@@ -62,6 +61,7 @@ FROM sales_data;
 Explanation: 
 LAG() pulls the previous record sale_amount.
 
+![Lag](https://github.com/user-attachments/assets/e323400d-1fa3-46e1-94f2-8d6acea13a96)
 
 
 
