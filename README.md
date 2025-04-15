@@ -148,7 +148,7 @@ SELECT * FROM (
 WHERE row_num <= 2;
 ```
 Explanation:
-Explanation
+
 ROW_NUMBER() gives a unique number per department sorted by date.
 Used to get the earliest employees, sales, etc.
 
@@ -172,6 +172,7 @@ FROM sales_data;
 
 ```
 Explanation
+
 Shows both departmental and overall max sale values.
 No GROUP BY needed—data remains row-wise.
 
