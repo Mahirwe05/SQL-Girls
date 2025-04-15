@@ -63,5 +63,46 @@ LAG() pulls the previous record sale_amount.
 ```
 ![Lag](https://github.com/user-attachments/assets/e323400d-1fa3-46e1-94f2-8d6acea13a96)
 
+```sql
+2.SELECT 
+    employee_name,
+    department,
+    sale_amount,
+    LEAD(sale_amount) OVER (ORDER BY sale_date) AS next_sale,
+    CASE 
+        WHEN sale_amount > LEAD(sale_amount) OVER (ORDER BY sale_date) THEN 'HIGHER'
+        WHEN sale_amount < LEAD(sale_amount) OVER (ORDER BY sale_date) THEN 'LOWER'
+        ELSE 'EQUAL'
+ END AS comparison_with_next
+FROM sales_data;
+```
+Explanation: LEAD() checks the sale after the current one.
+
+![lead()](https://github.com/user-attachments/assets/254a9037-15fd-4e97-b008-b57141d005a3)
+
+
+
+```sql
+3. SELECT 
+    department,
+    employee_name,
+    sale_amount,
+    RANK() OVER (PARTITION BY department ORDER BY sale_amount DESC) AS rank,
+    DENSE_RANK() OVER (PARTITION BY department ORDER BY sale_amount DESC) AS dense_rank
+FROM sales_data;
+```
+![rank denserank](https://github.com/user-attachments/assets/31714b2c-bc0e-4100-a213-6fefbe344ff1)
+
+
+Explanation:
+RANK() skips numbers when there is a tie.
+
+DENSE_RANK() does not skip and gives continuous ranks.
+
+Real life application
+
+Used for leaderboards, employee performance comparisons, or prize distributions.
+
+
 
 
