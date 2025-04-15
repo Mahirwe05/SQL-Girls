@@ -161,8 +161,7 @@ Great for onboarding analysis or tracking early adopters.
 
 
 6. MAX AND MAX_OVERALL FUNCTIONS
-
-    ```sql
+```sql
 SELECT 
     department,
     employee_name,
@@ -170,8 +169,8 @@ SELECT
     MAX(sale_amount) OVER (PARTITION BY department) AS max_in_dept,
     MAX(sale_amount) OVER () AS max_overall
 FROM sales_data;
-```
 
+```
 Explanation
 Shows both departmental and overall max sale values.
 No GROUP BY needed—data remains row-wise.
