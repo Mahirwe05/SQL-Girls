@@ -161,7 +161,8 @@ Great for onboarding analysis or tracking early adopters.
 
 
 6. MAX AND MAX_OVERALL FUNCTIONS
-    ```SQL
+
+    ```sql
 SELECT 
     department,
     employee_name,
@@ -178,7 +179,10 @@ No GROUP BY needed—data remains row-wise.
 Real-life Application
 Used in dashboards for KPIs, benchmarks, and performance goals.
 
-![AggregateFunction](https://github.com/user-attachments/assets/50c511d0-cffe-4a10-b6db-2e30a606cc85)
+
+![AggregateFunction](https://github.com/user-attachments/assets/926debcc-f631-446f-a99d-bdffb042403d)
+
+
 
 
 
