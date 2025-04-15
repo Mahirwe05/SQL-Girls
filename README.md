@@ -190,15 +190,20 @@ Used in dashboards for KPIs, benchmarks, and performance goals.
 ## Findings
 
 Alice had the highest sale in Electronics.
+
 Furniture had two employees with equal sales.
+
 The earliest sale was on Jan 10, 2023.
 
 ## Conclusion
 This database system efficiently manages sales data by tracking employee records and sales, their ids, employee names, departments, date, and sales amount. The queries help saler's to analyze their working and employee engagement.
 ________________________________________
 For further enhancements, we could implement:
+
 •	A feature to track overdue payments due date.
+
 •	Automated fine calculations for late returns.
+
 •	A notification system to remind salerperson of due dates.
 
 **Repository:** [https://github.com/Mahirwe05/SQL-Girls/edit/main/README.md]
