@@ -46,7 +46,7 @@ INSERT INTO sales_data VALUES (5, 105, 'Eva', 'Furniture', 900, TO_DATE('2023-01
 INSERT INTO sales_data VALUES (6, 106, 'Frank', 'Furniture', 950, TO_DATE('2023-01-20', 'YYYY-MM-DD'));
 
 ```
-1.LAG FUNCTION
+1.🗂️LAG FUNCTION
 
 ```sql
  SELECT 
@@ -69,7 +69,7 @@ LAG() pulls the previous record sale_amount.
 ![Lag](https://github.com/user-attachments/assets/e323400d-1fa3-46e1-94f2-8d6acea13a96)
 
 
-2.LEAD FUNCTION
+2.🗂️LEAD FUNCTION
 
 ```sql
 SELECT 
@@ -90,7 +90,7 @@ Explanation: LEAD() checks the sale after the current one.
 
 
 
-3.RANK AND DENSE_RANK
+3.🗂️RANK AND DENSE_RANK
 
 ```sql
  SELECT 
