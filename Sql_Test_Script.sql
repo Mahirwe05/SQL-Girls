@@ -5,6 +5,7 @@ CREATE TABLE sales_data (
     department    VARCHAR2(50),
     sale_amount   NUMBER,
     sale_date     DATE
+
 );
 
 INSERT INTO sales_data VALUES (1, 101, 'Alice', 'Electronics', 1000, TO_DATE('2023-01-10', 'YYYY-MM-DD'));
