@@ -1,4 +1,4 @@
-![RankFunction](https://github.com/user-attachments/assets/63a12d24-7c50-4017-b315-746052da48df)#  PL/SQL Window Functions Assignment
+#  PL/SQL Window Functions Assignment
 
 ## Introduction:
 
@@ -113,7 +113,7 @@ Real life application
 
 Used for leaderboards, employee performance comparisons, or prize distributions.
 
-4.RANK FUNCTION
+4.RANK FUNCTIONS
    ```SQL
     SELECT * FROM (
     SELECT 
@@ -135,7 +135,7 @@ Useful for recognizing top performers in each team or region.
 ![RankFunction](https://github.com/user-attachments/assets/0bfa832a-5866-4e5d-8096-d20b0123ac96)
 
 
-5. ROW NUMBER FUNCTION
+5. ROW NUMBER FUNCTIONS
 ```SQL
 SELECT * FROM (
     SELECT 
@@ -160,7 +160,8 @@ Great for onboarding analysis or tracking early adopters.
 
 
 
-6. ```SQL
+6. MAX AND MAX_OVERALL FUNCTIONS
+    ```SQL
 SELECT 
     department,
     employee_name,
@@ -177,7 +178,8 @@ No GROUP BY needed—data remains row-wise.
 Real-life Application
 Used in dashboards for KPIs, benchmarks, and performance goals.
 
-![Uploading AggregateFunction.jpg…]()
+![AggregateFunction](https://github.com/user-attachments/assets/50c511d0-cffe-4a10-b6db-2e30a606cc85)
+
 
 
 
