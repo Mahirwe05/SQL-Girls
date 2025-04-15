@@ -1,4 +1,4 @@
-#  PL/SQL Window Functions Assignment
+![RankFunction](https://github.com/user-attachments/assets/63a12d24-7c50-4017-b315-746052da48df)#  PL/SQL Window Functions Assignment
 
 ## Introduction:
 
@@ -128,13 +128,16 @@ WHERE sale_rank <= 3;
 Explanation:
 Fetches the top 3 sales per department.
 RANK() allows ties to share the same rank.
+
 Real-life Application
 Useful for recognizing top performers in each team or region.
 
 ![RankFunction](https://github.com/user-attachments/assets/0bfa832a-5866-4e5d-8096-d20b0123ac96)
 
 
-5.SELECT * FROM (
+5. ROW NUMBER FUNCTION
+```SQL
+SELECT * FROM (
     SELECT 
         department,
         employee_name,
@@ -143,52 +146,40 @@ Useful for recognizing top performers in each team or region.
     FROM sales_data
 )
 WHERE row_num <= 2;
+```
 Explanation:
 Explanation
 ROW_NUMBER() gives a unique number per department sorted by date.
 Used to get the earliest employees, sales, etc.
+
 Real-life Application
 Great for onboarding analysis or tracking early adopters.
 
 
+![RowNumberFunction](https://github.com/user-attachments/assets/7b305d09-0da5-44c8-8937-392ed48bd47e)
 
 
 
-![Test runs6](./RowNumberFunction.jpg)
-6.SELECT 
+6. ```SQL
+SELECT 
     department,
     employee_name,
     sale_amount,
     MAX(sale_amount) OVER (PARTITION BY department) AS max_in_dept,
     MAX(sale_amount) OVER () AS max_overall
 FROM sales_data;
+```
 
 Explanation
 Shows both departmental and overall max sale values.
 No GROUP BY needed—data remains row-wise.
+
 Real-life Application
 Used in dashboards for KPIs, benchmarks, and performance goals.
 
-![Test runs7](./AggregateFunction.jpg)
+![Uploading AggregateFunction.jpg…]()
 
 
-
-
-**Screenshots of creating a table, inserting data and queries results**
-
-![Test runs1](./CreateTable.jpg)
-
-![Test runs2](./LagFunction.jpg)
-
-![Test runs3](./LeadFunction.jpg)
-
-![Test runs4](./DenseRankFunction.jpg)
-
-![Test runs5](./RankFunction.jpg)
-
-![Test runs6](./RowNumberFunction.jpg)
-
-![Test runs7](./AggregateFunction.jpg)
 
 ## Findings
 
@@ -204,7 +195,5 @@ For further enhancements, we could implement:
 •	Automated fine calculations for late returns.
 •	A notification system to remind salerperson of due dates.
 
-
-
-**Repository:** [https://github.com/Mahirwe05]
+**Repository:** [https://github.com/Mahirwe05/SQL-Girls/edit/main/README.md]
 
