@@ -113,6 +113,98 @@ Real life application
 
 Used for leaderboards, employee performance comparisons, or prize distributions.
 
+4.RANK FUNCTION
+   ```SQL
+    SELECT * FROM (
+    SELECT 
+        department,
+        employee_name,
+        sale_amount,
+        RANK() OVER (PARTITION BY department ORDER BY sale_amount DESC) AS sale_rank
+    FROM sales_data
+)
+WHERE sale_rank <= 3;
+```
+Explanation:
+Fetches the top 3 sales per department.
+RANK() allows ties to share the same rank.
+Real-life Application
+Useful for recognizing top performers in each team or region.
+
+![RankFunction](https://github.com/user-attachments/assets/0bfa832a-5866-4e5d-8096-d20b0123ac96)
 
 
+5.SELECT * FROM (
+    SELECT 
+        department,
+        employee_name,
+        sale_date,
+        ROW_NUMBER() OVER (PARTITION BY department ORDER BY sale_date) AS row_num
+    FROM sales_data
+)
+WHERE row_num <= 2;
+Explanation:
+Explanation
+ROW_NUMBER() gives a unique number per department sorted by date.
+Used to get the earliest employees, sales, etc.
+Real-life Application
+Great for onboarding analysis or tracking early adopters.
+
+
+
+
+
+![Test runs6](./RowNumberFunction.jpg)
+6.SELECT 
+    department,
+    employee_name,
+    sale_amount,
+    MAX(sale_amount) OVER (PARTITION BY department) AS max_in_dept,
+    MAX(sale_amount) OVER () AS max_overall
+FROM sales_data;
+
+Explanation
+Shows both departmental and overall max sale values.
+No GROUP BY needed—data remains row-wise.
+Real-life Application
+Used in dashboards for KPIs, benchmarks, and performance goals.
+
+![Test runs7](./AggregateFunction.jpg)
+
+
+
+
+**Screenshots of creating a table, inserting data and queries results**
+
+![Test runs1](./CreateTable.jpg)
+
+![Test runs2](./LagFunction.jpg)
+
+![Test runs3](./LeadFunction.jpg)
+
+![Test runs4](./DenseRankFunction.jpg)
+
+![Test runs5](./RankFunction.jpg)
+
+![Test runs6](./RowNumberFunction.jpg)
+
+![Test runs7](./AggregateFunction.jpg)
+
+## Findings
+
+Alice had the highest sale in Electronics.
+Furniture had two employees with equal sales.
+The earliest sale was on Jan 10, 2023.
+
+## Conclusion
+This database system efficiently manages sales data by tracking employee records and sales, their ids, employee names, departments, date, and sales amount. The queries help saler's to analyze their working and employee engagement.
+________________________________________
+For further enhancements, we could implement:
+•	A feature to track overdue payments due date.
+•	Automated fine calculations for late returns.
+•	A notification system to remind salerperson of due dates.
+
+
+
+**Repository:** [https://github.com/Mahirwe05]
 
